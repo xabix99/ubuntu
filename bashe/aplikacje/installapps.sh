@@ -14,8 +14,6 @@ sudo apt install -y git
 sudo apt install -y zsh
 sudo apt install -y curl
 sudo apt install -y dconf
-sudo apt install -y zip
-sudo apt install -y unzip
 sudo apt install -y wget
 sudo apt install -y snapd
 sudo apt install -y discord

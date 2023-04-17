@@ -13,11 +13,13 @@ echo
 sudo apt install -y dconf
 sudo apt install -y gnome-shell-extensions
 sudo apt install -y gnome-tweaks
-sudo add-apt-repository ppa:papirus/papirus -y
+sudo apt install -y unzip
+sudo apt install -y zip
 gnome-shell-extension-tool -e user-themes
-sudo cd /usr/share/themes
-&& wget "https://github.com/dracula/gtk/archive/master.zip"
-&& unzip gtk-master.zip && sudo rm gtk-master.zip
+sudo add-apt-repository ppa:papirus/papirus -y
+cd /usr/share/themes
+wget "https://github.com/dracula/gtk/archive/master.zip"
+unzip master.zip && sudo rm master.zip
 # Ustawienia wygląðu
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "Yaru-purple-dark"
