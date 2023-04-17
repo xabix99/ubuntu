@@ -1,15 +1,15 @@
 #!/bin/bash
-echo /n
+echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
 echo Aktualizowanie systemu
 printf %"$COLUMNS"s |tr " " "-"
-echo /n
+echo && echo && echo
 sudo apt-get update -y 
-echo /n
+echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
 echo Instalowanie aplikacji
 printf %"$COLUMNS"s |tr " " "-"
-echo /n
+echo && echo && echo
 sudo apt install -y git
 sudo apt install -y zsh
 sudo apt install -y curl
@@ -38,26 +38,26 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update -y && sudo apt install github-desktop
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
-echo /n
+echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
 echo Aktualizowanie pakietow
 printf %"$COLUMNS"s |tr " " "-"
-echo /n
+echo && echo && echo
 sudo apt update
 sudo apt install --fix-missing -y
 sudo apt upgrade --allow-downgrades -y
 sudo apt full-upgrade --allow-downgrades -y
-echo /n
+echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
 echo Finalizowanie instalacji
 printf %"$COLUMNS"s |tr " " "-"
-echo /n
+echo && echo && echo
 sudo apt install -f
 sudo apt autoremove -y
 sudo apt autoclean
 sudo apt clean
-echo /n
+echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
 echo Wszystko gotowe
 printf %"$COLUMNS"s |tr " " "-"
-echo /n
+echo && echo && echo
