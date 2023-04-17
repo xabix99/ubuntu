@@ -14,6 +14,7 @@ sudo add-apt-repository ppa:papirus/papirus -y
 cd /usr/share/themes
 wget https://github.com/dracula/gtk/archive/master.zip
 unzip master.zip && sudo rm -rf master.zip
+sudo chmod -R 755 gtk-master
 # Ustawienia wygląðu
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "Yaru-purple-dark"
