@@ -15,8 +15,9 @@ wget https://github.com/dracula/gtk/archive/master.zip
 unzip master.zip && sudo rm -rf master.zip
 sudo chmod -R 755 gtk-master
 # Ustawienia wygląðu
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
-gsettings set org.gnome.desktop.wm.preferences theme "Yaru-purple-dark"
+gsettings set org.gnome.shell.extensions.user-theme name Yaru-purple-dark
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 # Dock settings
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
@@ -30,3 +31,5 @@ printf %"$COLUMNS"s |tr " " "-"
 echo Wszystko gotowe
 printf %"$COLUMNS"s |tr " " "-"
 echo && echo && echo
+
+
