@@ -1,23 +1,15 @@
 #!/bin/bash
-set -eu -o pipefail
-
-sudo -n true
-test $? -eq 0 || exit 1 "potrzebujesz uprawnien sudo aby uzyc tego skryptu"
-
-read -p "Czy twoj system to ubuntu? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-    exit 1
-fi
+echo "/n"
 printf %"$COLUMNS"s |tr " " "-"
 echo Aktualizowanie systemu
 printf %"$COLUMNS"s |tr " " "-"
+echo "/n"
 sudo apt-get update -y 
-
+echo "/n"
 printf %"$COLUMNS"s |tr " " "-"
 echo Instalowanie aplikacji
 printf %"$COLUMNS"s |tr " " "-"
+echo "/n"
 sudo apt install -y git
 sudo apt install -y zsh
 sudo apt install -y curl
@@ -33,8 +25,6 @@ sudo apt install -y libreoffice-calc
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update && sudo apt install brave-browser -y
-sudo apt install -y gnome-shell-extensions
-sudo apt install -y gnome-tweaks
 # Programowanie
 sudo apt install -y nodejs
 sudo apt install -y npm
@@ -50,17 +40,26 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update -y && sudo apt install github-desktop
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
+echo "/n"
 printf %"$COLUMNS"s |tr " " "-"
 echo Aktualizowanie pakietow
 printf %"$COLUMNS"s |tr " " "-"
+echo "/n"
 sudo apt update
 sudo apt install --fix-missing -y
 sudo apt upgrade --allow-downgrades -y
 sudo apt full-upgrade --allow-downgrades -y
+echo "/n"
 printf %"$COLUMNS"s |tr " " "-"
 echo Finalizowanie instalacji
 printf %"$COLUMNS"s |tr " " "-"
+echo "/n"
 sudo apt install -f
 sudo apt autoremove -y
 sudo apt autoclean
 sudo apt clean
+echo "/n"
+printf %"$COLUMNS"s |tr " " "-"
+echo Wszystko gotowe
+printf %"$COLUMNS"s |tr " " "-"
+echo "/n"

@@ -1,18 +1,18 @@
 #!/bin/bash
-set -eu -o pipefail
-
-sudo -n true
-test $? -eq 0 || exit 1 "you should have sudo privilege to run this script"
-
-read -p "Czy twoj system to ubuntu? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-    exit 1
-fi
+echo
+echo
+echo
+echo
 printf %"$COLUMNS"s |tr " " "-"
 echo Zmiana wygladu
 printf %"$COLUMNS"s |tr " " "-"
+echo
+echo
+echo
+echo
+sudo apt install -y dconf
+sudo apt install -y gnome-shell-extensions
+sudo apt install -y gnome-tweaks
 sudo add-apt-repository ppa:papirus/papirus -y
 gnome-shell-extension-tool -e user-themes
 sudo cd /usr/share/themes
