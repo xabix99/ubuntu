@@ -19,7 +19,9 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.shell.extensions.user-theme name Yaru-purple-dark
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+gnome-extensions disable ding@rastersoft.com
 # Dock settings
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
 gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
@@ -33,3 +35,4 @@ printf %"$COLUMNS"s |tr " " "-"
 echo && echo && echo
 
 
+gsettings set org.gnome.shell.extensions.desktop-icons show-home false

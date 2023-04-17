@@ -1,6 +1,12 @@
 #!/bin/bash
 echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
+echo Usuwanie smieci
+printf %"$COLUMNS"s |tr " " "-"
+sudo apt --purge remove -y thunderbird
+sudo apt --purge remove -y firefox
+echo && echo && echo
+printf %"$COLUMNS"s |tr " " "-"
 echo Aktualizowanie systemu
 printf %"$COLUMNS"s |tr " " "-"
 echo && echo && echo
@@ -11,6 +17,7 @@ echo Instalowanie aplikacji
 printf %"$COLUMNS"s |tr " " "-"
 echo && echo && echo
 sudo apt install -y git
+sudo apt install -y neofetch
 sudo apt install -y zsh
 sudo apt install -y curl
 sudo apt install -y dconf
@@ -37,6 +44,7 @@ wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee 
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 sudo apt update -y && sudo apt install github-desktop
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+# Auto CPU freq
 cd auto-cpufreq && sudo ./auto-cpufreq-installer -i
 echo && echo && echo
 printf %"$COLUMNS"s |tr " " "-"
