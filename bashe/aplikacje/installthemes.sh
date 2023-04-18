@@ -5,6 +5,7 @@ printf %"$COLUMNS"s |tr " " "-"
 echo Zmiana wygladu
 printf %"$COLUMNS"s |tr " " "-"
 echo && echo && echo
+sudo apt install -y dconf
 sudo apt install -y gnome-shell-extensions
 sudo apt install -y gnome-tweaks
 sudo apt install -y unzip
@@ -33,6 +34,3 @@ printf %"$COLUMNS"s |tr " " "-"
 echo Wszystko gotowe
 printf %"$COLUMNS"s |tr " " "-"
 echo && echo && echo
-
-
-gsettings set org.gnome.shell.extensions.desktop-icons show-home false
