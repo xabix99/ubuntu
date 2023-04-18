@@ -9,7 +9,7 @@ sudo apt install -y gnome-shell-extensions
 sudo apt install -y gnome-tweaks
 sudo apt install -y unzip
 sudo apt install -y zip
-sudo apt-get install papirus-icon-theme
+sudo apt-get install -y papirus-icon-theme
 cd /usr/share/themes
 wget https://github.com/dracula/gtk/archive/master.zip
 unzip master.zip && sudo rm -rf master.zip
